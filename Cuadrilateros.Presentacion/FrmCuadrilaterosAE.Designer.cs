@@ -42,7 +42,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(51, 66);
+            this.label1.Location = new System.Drawing.Point(51, 90);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 17);
             this.label1.TabIndex = 0;
@@ -51,7 +51,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(51, 108);
+            this.label2.Location = new System.Drawing.Point(51, 148);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 17);
             this.label2.TabIndex = 0;
@@ -59,14 +59,14 @@
             // 
             // txtLadoA
             // 
-            this.txtLadoA.Location = new System.Drawing.Point(137, 66);
+            this.txtLadoA.Location = new System.Drawing.Point(137, 90);
             this.txtLadoA.Name = "txtLadoA";
             this.txtLadoA.Size = new System.Drawing.Size(114, 22);
             this.txtLadoA.TabIndex = 1;
             // 
             // txtLadoB
             // 
-            this.txtLadoB.Location = new System.Drawing.Point(137, 108);
+            this.txtLadoB.Location = new System.Drawing.Point(137, 148);
             this.txtLadoB.Name = "txtLadoB";
             this.txtLadoB.Size = new System.Drawing.Size(114, 22);
             this.txtLadoB.TabIndex = 2;
@@ -99,7 +99,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(388, 358);
+            this.ClientSize = new System.Drawing.Size(406, 405);
             this.ControlBox = false;
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnOk);
@@ -110,8 +110,7 @@
             this.MaximumSize = new System.Drawing.Size(406, 405);
             this.MinimumSize = new System.Drawing.Size(406, 405);
             this.Name = "FrmCuadrilaterosAE";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CuadrilaterosAE";
+            this.Text = "Nuevo Cuadrilátero";
             this.Load += new System.EventHandler(this.FrmCuadrilaterosAE_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);

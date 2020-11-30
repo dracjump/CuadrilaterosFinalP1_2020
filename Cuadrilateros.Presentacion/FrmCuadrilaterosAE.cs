@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Cuadrilateros.Presentacion
 {
-    public partial class FrmCuadrilaterosAE : Form
+    public partial class FrmCuadrilaterosAE : MetroFramework.Forms.MetroForm
     {
         public FrmCuadrilaterosAE()
         {
@@ -30,18 +30,52 @@ namespace Cuadrilateros.Presentacion
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-            if (cuadrilatero == null)
+            if (ValidarDatos())
             {
-                cuadrilatero = new Cuadrilatero();
+                if (cuadrilatero == null)
+                {
+                    cuadrilatero = new Cuadrilatero();
+                }
+                cuadrilatero.LadoA = double.Parse(txtLadoA.Text);
+                cuadrilatero.LadoB = double.Parse(txtLadoB.Text);
+                this.DialogResult = DialogResult.OK;
             }
-            cuadrilatero.LadoA = double.Parse(txtLadoA.Text);
-            cuadrilatero.LadoB = double.Parse(txtLadoB.Text);
 
 
-            this.DialogResult = DialogResult.OK;
+            
         }
 
+        private bool ValidarDatos()
+        {
+            errorProvider1.Clear();
+            bool valido = true;
 
+            double LadoA;
+            if (!double.TryParse(txtLadoA.Text, out LadoA))
+            {
+                valido = false;
+                errorProvider1.SetError(txtLadoA, "valor NO permitido, ingrese un Numero!");
+            }
+            else if (LadoA <= 0)
+            {
+                valido = false;
+                errorProvider1.SetError(txtLadoA, "El Número debe ser MAYOR que 0(cero)");
+            }
+
+
+            double LadoB;
+            if (!double.TryParse(txtLadoB.Text, out LadoB))
+            {
+                valido = false;
+                errorProvider1.SetError(txtLadoB, "valor NO permitido, ingrese un Numero!");
+            }
+            else if (LadoB <= 0)
+            {
+                valido = false;
+                errorProvider1.SetError(txtLadoB, "El Número debe ser MAYOR que 0(cero)");
+            }
+            return valido;
+        }
 
         private void FrmCuadrilaterosAE_Load(object sender, EventArgs e)
         {
