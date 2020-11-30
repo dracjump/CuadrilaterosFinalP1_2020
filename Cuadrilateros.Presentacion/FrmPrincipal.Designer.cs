@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbBorrar = new System.Windows.Forms.ToolStripButton();
@@ -53,6 +53,7 @@
             this.cmnLadoD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmnPerimetro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmnArea = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perimetroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
@@ -111,7 +112,8 @@
             // tsbOrdenar
             // 
             this.tsbOrdenar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mayMenorToolStripMenuItem});
+            this.mayMenorToolStripMenuItem,
+            this.perimetroToolStripMenuItem});
             this.tsbOrdenar.Font = new System.Drawing.Font("Ebrima", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsbOrdenar.Image = global::Cuadrilateros.Presentacion.Properties.Resources.Order_History_36px;
             this.tsbOrdenar.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -185,16 +187,17 @@
             this.dgvDatos.ReadOnly = true;
             this.dgvDatos.RowHeadersVisible = false;
             this.dgvDatos.RowHeadersWidth = 51;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Ebrima", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvDatos.RowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Ebrima", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvDatos.RowsDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvDatos.RowTemplate.Height = 24;
+            this.dgvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDatos.Size = new System.Drawing.Size(874, 690);
             this.dgvDatos.TabIndex = 0;
             // 
             // cmnLadoA
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Ebrima", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmnLadoA.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Ebrima", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmnLadoA.DefaultCellStyle = dataGridViewCellStyle8;
             this.cmnLadoA.HeaderText = "LadoA";
             this.cmnLadoA.MinimumWidth = 6;
             this.cmnLadoA.Name = "cmnLadoA";
@@ -203,8 +206,8 @@
             // 
             // cmnLadoB
             // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Ebrima", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmnLadoB.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Ebrima", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmnLadoB.DefaultCellStyle = dataGridViewCellStyle9;
             this.cmnLadoB.HeaderText = "LadoB";
             this.cmnLadoB.MinimumWidth = 6;
             this.cmnLadoB.Name = "cmnLadoB";
@@ -213,8 +216,8 @@
             // 
             // cmnLadoC
             // 
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Ebrima", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmnLadoC.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Ebrima", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmnLadoC.DefaultCellStyle = dataGridViewCellStyle10;
             this.cmnLadoC.HeaderText = "LadoC";
             this.cmnLadoC.MinimumWidth = 6;
             this.cmnLadoC.Name = "cmnLadoC";
@@ -223,8 +226,8 @@
             // 
             // cmnLadoD
             // 
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Ebrima", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmnLadoD.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Ebrima", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmnLadoD.DefaultCellStyle = dataGridViewCellStyle11;
             this.cmnLadoD.HeaderText = "LadoD";
             this.cmnLadoD.MinimumWidth = 6;
             this.cmnLadoD.Name = "cmnLadoD";
@@ -234,8 +237,8 @@
             // cmnPerimetro
             // 
             this.cmnPerimetro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Ebrima", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmnPerimetro.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Ebrima", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmnPerimetro.DefaultCellStyle = dataGridViewCellStyle12;
             this.cmnPerimetro.HeaderText = "Perimetro";
             this.cmnPerimetro.MinimumWidth = 6;
             this.cmnPerimetro.Name = "cmnPerimetro";
@@ -244,12 +247,19 @@
             // cmnArea
             // 
             this.cmnArea.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Ebrima", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmnArea.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Ebrima", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmnArea.DefaultCellStyle = dataGridViewCellStyle13;
             this.cmnArea.HeaderText = "Área";
             this.cmnArea.MinimumWidth = 6;
             this.cmnArea.Name = "cmnArea";
             this.cmnArea.ReadOnly = true;
+            // 
+            // perimetroToolStripMenuItem
+            // 
+            this.perimetroToolStripMenuItem.Name = "perimetroToolStripMenuItem";
+            this.perimetroToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.perimetroToolStripMenuItem.Text = "Perimetro-Asc";
+            this.perimetroToolStripMenuItem.Click += new System.EventHandler(this.perimetroToolStripMenuItem_Click);
             // 
             // frmMenuPrincipal
             // 
@@ -295,6 +305,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cmnLadoD;
         private System.Windows.Forms.DataGridViewTextBoxColumn cmnPerimetro;
         private System.Windows.Forms.DataGridViewTextBoxColumn cmnArea;
+        private System.Windows.Forms.ToolStripMenuItem perimetroToolStripMenuItem;
     }
 }
 

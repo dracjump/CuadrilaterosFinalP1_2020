@@ -81,8 +81,27 @@ namespace Cuadrilateros.Presentacion
 
         private void tsbEditar_Click(object sender, EventArgs e)
         {
+            if (dgvDatos.SelectedRows.Count > 0)
+            {
+                DataGridViewRow r = dgvDatos.SelectedRows[0];
+                Cuadrilatero c = (Cuadrilatero)r.Tag;
+                FrmCuadrilaterosAE frm = new FrmCuadrilaterosAE();
+                frm.Text = "Editar Cuadrilatero";
+                frm.SetTriangulo(c);
+                DialogResult dr = frm.ShowDialog(this);
+                if (dr == DialogResult.OK)
+                {
+                    c = frm.GetCuadrilatero();
+                    repositorio.Editar(c);
+                    SetearFila(r, c);
 
+                    MessageBox.Show("Registro Editado", "Mensaje",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Exclamation);
+                }
+            }
         }
+
 
 
         private void tsbOrdenar_Click(object sender, EventArgs e)
@@ -102,6 +121,13 @@ namespace Cuadrilateros.Presentacion
         private void mayMenorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             lista = repositorio.GetListaOrdenada();
+
+            MostrarDatosEnGrilla();
+        }
+
+        private void perimetroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lista = repositorio.GetPerOrdenada();
             MostrarDatosEnGrilla();
         }
     }

@@ -86,5 +86,10 @@ namespace Cuadrilateros.Presentacion
 
             }
         }
+
+        internal void SetTriangulo(Cuadrilatero c)
+        {
+            cuadrilatero = c;
+        }
     }
 }

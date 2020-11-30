@@ -41,6 +41,7 @@ namespace Cuadrilateros.Datos
             lector.Close();
             lector.Dispose();
         }
+        public bool Check { get; set; } = false;
         public void Agregar(Cuadrilatero cuadrilatero)
         {
             Check = true;
@@ -52,7 +53,7 @@ namespace Cuadrilateros.Datos
             return listaCuadrilateros;
         }
 
-        public bool Check { get; set; } = false;
+
         Cuadrilatero cuadrilatero = new Cuadrilatero();
 
         public void Editar(Cuadrilatero cuadrilatero)
@@ -71,9 +72,14 @@ namespace Cuadrilateros.Datos
             escritor.Dispose();
         }
 
+        public List<Cuadrilatero> GetPerOrdenada()
+        {
+            return listaCuadrilateros.OrderBy(c => c.CalcularPerimetro()).ToList();
+        }
+
         public List<Cuadrilatero> GetListaOrdenada()
         {
-            return listaCuadrilateros.OrderByDescending(t => t.LadoA).ToList();
+            return listaCuadrilateros.OrderByDescending(c => c.LadoA).ToList();
         }
     }
 
