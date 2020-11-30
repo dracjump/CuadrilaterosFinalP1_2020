@@ -73,7 +73,7 @@ namespace Cuadrilateros.Datos
 
         public List<Cuadrilatero> GetListaOrdenada()
         {
-            return listaCuadrilateros.OrderBy(t => t.LadoA).ThenBy(t => t.LadoB).ToList();
+            return listaCuadrilateros.OrderByDescending(t => t.LadoA).ToList();
         }
     }
 
