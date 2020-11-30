@@ -69,7 +69,7 @@
             this.txtLadoB.Location = new System.Drawing.Point(137, 108);
             this.txtLadoB.Name = "txtLadoB";
             this.txtLadoB.Size = new System.Drawing.Size(114, 22);
-            this.txtLadoB.TabIndex = 1;
+            this.txtLadoB.TabIndex = 2;
             // 
             // btnSalir
             // 
@@ -77,7 +77,7 @@
             this.btnSalir.Location = new System.Drawing.Point(265, 255);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(99, 78);
-            this.btnSalir.TabIndex = 2;
+            this.btnSalir.TabIndex = 4;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -87,7 +87,7 @@
             this.btnOk.Location = new System.Drawing.Point(32, 255);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(99, 78);
-            this.btnOk.TabIndex = 2;
+            this.btnOk.TabIndex = 3;
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
